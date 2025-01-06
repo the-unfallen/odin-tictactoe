@@ -1,0 +1,1 @@
+alert('Shall we begin!')

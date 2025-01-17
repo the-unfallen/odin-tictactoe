@@ -1,3 +1,251 @@
-body {
-    background-color: teal;
-}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .board {
+      display: grid;
+      height: 390px;
+      width: 390px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      border: 1px solid black;
+      gap: 2px;
+      padding: 2px;
+      background-color: var(--light-pink-era);
+    }
+    
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2.5rem;
+      border: 1px solid grey;
+      background: white;
+      cursor: pointer;
+      /* z-index: 900; */
+    }
+  
+    #winAnnounced {
+      font-size: 32px;
+    }
+  
+    .tokenDiv {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      box-sizing: border-box;
+    }
+  
+    .white {
+      border: 1px solid gray;
+      background-color: gray;
+    }
+  
+    .blue {
+      border: 1px solid blue;
+      background-color: blue;
+    }
+  
+    .red {
+      border: 1px solid red;
+      background-color: red;
+    }
+  
+    body {
+      background-color: lightblue;
+      /* background-color: #C9C9C9; */
+      display: flex;
+      justify-content: center;
+      font-family: 'merriweatherregular', sans-serif;
+    }
+  
+    .styled-border {
+      border: 5px double purple;
+    }
+  
+    #intro_screen {
+      margin-top: 40px;
+    }
+  
+    #gameMode>span {
+      font-size: 32px;
+      color: var(--dark-blue-era);
+    }
+  
+    #gameMode {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+  
+    #gameMode button {
+      width: 50%;
+      font-size: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      height: 40px;
+      border-radius: 20px;
+      outline: 0;
+      background-color: none;
+      border: 1px solid var(--dark-blue-era);
+      color: var(--dark-blue-era);
+      /* color: blue; */
+    }
+  
+    #gameMode button:hover {
+      background-color: black;
+      color: white;
+    }
+  
+    #twoPlayersMode, #playerVComputer {
+      margin-top: 60px;
+    }
+  
+  
+    #twoPlayersMode form, #playerVComputer form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      border: 2px solid black;
+      padding: 24px;
+      border-radius: 8px;
+  
+    }
+  
+    #twoPlayersMode form input[type='text'], #playerVComputer form  input[type='text'] {
+      height: 32px;
+      width: 60%;
+      border-radius: 16px;
+      padding-left: 12px;
+      outline: 0;
+      border: 0;
+    }
+  
+  
+    #twoPlayersMode form input[type='submit'], #twoPlayersMode form button, #playerVComputer form  input[type='submit'], #playerVComputer form  button {
+      width: 25%;
+      font-size: 16px;
+      height: 30px;
+      border-radius: 15px;
+      outline: 0;
+      background-color: none;
+      border: 1px solid black;
+    }
+  
+  
+  
+    #twoPlayersMode form input[type='submit']:hover, #twoPlayersMode form button:hover, #playerVComputer form  input[type='submit']:hover, #playerVComputer form  button:hover {
+      background-color: black;
+      color: white;
+    }
+  
+    button {
+      cursor: pointer;
+    }
+  
+    .container {
+      /* border: 2px solid black; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 8px;
+      padding: 12px;
+    }
+  
+    #gameButtons {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  
+  :root {
+      --primary-color: #3498db;
+      --dark-blue-era: #051936;
+      --light-pink-era: #F8F0E8;
+    
+  }
+  
+  
+    #gameButtons button {
+      width: 25%;
+      font-size: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      height: 40px;
+      border-radius: 20px;
+      outline: 0;
+      background-color: none;
+      border: 1px solid black;
+      /* color: blue; */
+    }
+  
+    #gameButtons button:hover {
+      background-color: black;
+      color: white;
+    }
+  
+    .turn {
+      margin-bottom: 16px;
+      margin-top: 8px;
+      color: var(--dark-blue-era);
+    }

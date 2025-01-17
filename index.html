@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Tic Tac Toe</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js
-    "></script>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TIC TAC TOE GUI</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="intro_screen">
+      <div id="gameMode">
+        
+        <span>Let's Play Tic Tac Toe</span>
+        <span>Welcome! Select Game Mode</span>
+
+        <button id="twoplay">2 players</button>
+        <button id="versusComp">Player vs Computer</button>
+      </div>
+      <div id="twoPlayersMode">
+        <form>
+          <span>Enter the name of players:</span>
+          <input type="text" id="playerOne" name="playerOneName" placeholder="Player One" required>
+          <input type="text" id="playerTwo" name="playerTwoName" placeholder="Player Two" required>
+          <button id="cancel2P" value="cancel" class="cancel" formnovalidate>Cancel</button>
+          <input id="submit2P" type="submit">
+          <!-- <button >Submit</button> -->
+        </form>
+      </div>
+      <div id="playerVComputer">
+        <form>
+          <span>Enter the name of player:</span>
+          <input type="text" id="playerName" name="playerName" placeholder="Player Name" required>
+          <button id="cancelPVC" class="cancel" value="cancel" formnovalidate>Cancel</button>
+          <input id="submitPVC" type="submit">
+          <!-- <button id="submitPVC">Submit</button> -->
+        </form>
+      </div>
+   </div>
+   <div id="gameSet">
+     <div class="container">
+       <h2 class="turn"></h2>
+       <div class="board"></div>
+       <div id="gameButtons">
+         <button id="playAgain">Play Again</button>
+         <button id="exitGame">Exit Game</button>
+       </div>
+       <div id="winAnnounced"></div>
+     </div>
+   </div>
+   <script src="script.js"></script>
+  </body>
 </html>

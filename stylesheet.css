@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'merriweatherregular';
-    src: url('/font/merriweather-regular.woff2') format('woff2'),
-         url('/font/merriweather-regular.woff') format('woff');
+    src: url('./font/merriweather-regular.woff2') format('woff2'),
+         url('./font/merriweather-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
